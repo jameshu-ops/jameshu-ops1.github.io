@@ -1,9 +1,9 @@
 /* --- Global Styles --- */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    background: #fff9e6; /* soft light yellow */
-    color: #333;
+    background: #fffaf0; /* soft cream */
+    color: #333333;
     line-height: 1.6;
 }
 
@@ -26,21 +26,12 @@ body {
     content: "";
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(255, 236, 179, 0.6); /* soft yellow overlay */
+    background: rgba(230, 197, 122, 0.6); /* soft muted yellow overlay */
 }
 
-.hero h1 {
-    font-size: 3rem;
+.hero h1, .hero p {
     position: relative;
     z-index: 1;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    position: relative;
-    z-index: 1;
-    margin-top: 10px;
 }
 
 /* --- Sections --- */
@@ -49,40 +40,41 @@ section {
     margin: 30px auto;
     width: 90%;
     max-width: 900px;
-    background: #fffde7; /* pale yellow for sections */
+    background: #fff4d9; /* light beige */
     border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     transition: transform 0.3s;
 }
 
 section:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 /* --- Section Titles --- */
 h2 {
-    color: #ffcc66; /* professional yellow accent */
+    font-family: 'Montserrat', sans-serif;
+    color: #e6c57a; /* muted gold */
     font-size: 1.8rem;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ffcc66;
+    border-bottom: 2px solid #e6c57a;
     padding-bottom: 8px;
 }
 
 /* --- Skills List --- */
-.skills ul {
+.skills ul, .achievements ul {
     list-style-type: none;
     padding-left: 0;
 }
 
-.skills li {
+.skills li, .achievements li {
     padding: 8px 0;
     position: relative;
     padding-left: 20px;
 }
 
-.skills li::before {
+.skills li::before, .achievements li::before {
     content: "•";
-    color: #ffcc66;
+    color: #e6c57a;
     position: absolute;
     left: 0;
 }
@@ -100,14 +92,14 @@ h2 {
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid #ffcc66;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #e6c57a;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .photos img:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 /* --- Contact Section --- */
@@ -121,33 +113,23 @@ h2 {
 
 .contact a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 25px;
     margin-top: 10px;
-    background-color: #ffcc66;
-    color: #333;
-    font-weight: bold;
+    background-color: #e6c57a; /* muted gold button */
+    color: #333333;
+    font-weight: 600;
     border-radius: 6px;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .contact a:hover {
-    background-color: #e6b800;
+    background-color: #d4aa5f; /* warm amber hover */
 }
 
 /* --- Responsive Design --- */
 @media screen and (max-width: 600px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .photos img {
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-    }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1rem; }
+    .photos img { width: 100%; max-width: 300px; height: auto; }
 }

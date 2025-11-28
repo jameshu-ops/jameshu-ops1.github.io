@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f1f7ff;
+    color: #333;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1510546020578-a35ae713c0fa?auto=format&fit=crop&w=1300&q=80');
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px black;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 900px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #005EB8;
+}
+
+.skills ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.photos {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.photos img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}

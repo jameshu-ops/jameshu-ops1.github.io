@@ -1,96 +1,153 @@
-/* Global Styles */
+/* --- Global Styles --- */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    background: #fff9e6; /* light yellow background */
+    background: #fff9e6; /* soft light yellow */
     color: #333;
+    line-height: 1.6;
 }
 
-/* Hero Section */
+/* --- Hero Section --- */
 .hero {
     background: url('https://images.unsplash.com/photo-1510546020578-a35ae713c0fa?auto=format&fit=crop&w=1300&q=80');
-    height: 350px;
+    height: 400px;
     background-size: cover;
     background-position: center;
-    color: #333;
+    color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 236, 179, 0.6); /* soft yellow overlay */
 }
 
 .hero h1 {
     font-size: 3rem;
-    color: #fff;
-    text-shadow: 2px 2px 6px #ffcc66; /* light yellow shadow for pop */
+    position: relative;
+    z-index: 1;
+    margin: 0;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #fff;
-    text-shadow: 1px 1px 4px #ffcc66;
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
 }
 
-/* Sections */
+/* --- Sections --- */
 section {
-    padding: 25px;
-    margin: 20px auto;
+    padding: 40px 20px;
+    margin: 30px auto;
     width: 90%;
     max-width: 900px;
-    background: #fffde7; /* pale yellow section background */
+    background: #fffde7; /* pale yellow for sections */
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
 }
 
-/* Headings */
+section:hover {
+    transform: translateY(-3px);
+}
+
+/* --- Section Titles --- */
 h2 {
-    color: #ffcc66; /* yellow accent */
+    color: #ffcc66; /* professional yellow accent */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     border-bottom: 2px solid #ffcc66;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+    padding-bottom: 8px;
 }
 
-/* Skills List */
+/* --- Skills List --- */
 .skills ul {
-    list-style: square;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills li {
+    padding: 8px 0;
+    position: relative;
     padding-left: 20px;
 }
 
-/* Gallery Section */
+.skills li::before {
+    content: "•";
+    color: #ffcc66;
+    position: absolute;
+    left: 0;
+}
+
+/* --- Gallery Section --- */
 .photos {
     display: flex;
-    gap: 15px;
-    justify-content: center;
     flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .photos img {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    border: 3px solid #ffcc66; /* yellow border around photos */
+    border: 2px solid #ffcc66;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .photos img:hover {
     transform: scale(1.05);
-    box-shadow: 0 5px 20px rgba(255, 204, 102, 0.6);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
 }
 
-/* Contact Section */
-.contact p {
-    font-size: 1rem;
+/* --- Contact Section --- */
+.contact {
     text-align: center;
 }
 
-/* Buttons or Links (if added later) */
-a {
-    color: #ffcc66;
-    text-decoration: none;
+.contact p {
+    font-size: 1.1rem;
 }
 
-a:hover {
-    text-decoration: underline;
+.contact a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ffcc66;
+    color: #333;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.contact a:hover {
+    background-color: #e6b800;
+}
+
+/* --- Responsive Design --- */
+@media screen and (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .photos img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
 }

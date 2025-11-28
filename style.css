@@ -1,16 +1,18 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background: #f1f7ff;
+    background: #fff9e6; /* light yellow background */
     color: #333;
 }
 
+/* Hero Section */
 .hero {
     background: url('https://images.unsplash.com/photo-1510546020578-a35ae713c0fa?auto=format&fit=crop&w=1300&q=80');
     height: 350px;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: #333;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -20,31 +22,45 @@ body {
 
 .hero h1 {
     font-size: 3rem;
-    text-shadow: 2px 2px 6px black;
+    color: #fff;
+    text-shadow: 2px 2px 6px #ffcc66; /* light yellow shadow for pop */
 }
 
+.hero p {
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 1px 1px 4px #ffcc66;
+}
+
+/* Sections */
 section {
-    padding: 20px;
+    padding: 25px;
     margin: 20px auto;
     width: 90%;
     max-width: 900px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    background: #fffde7; /* pale yellow section background */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
+/* Headings */
 h2 {
-    color: #005EB8;
+    color: #ffcc66; /* yellow accent */
+    border-bottom: 2px solid #ffcc66;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
+/* Skills List */
 .skills ul {
     list-style: square;
     padding-left: 20px;
 }
 
+/* Gallery Section */
 .photos {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -53,5 +69,28 @@ h2 {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 3px solid #ffcc66; /* yellow border around photos */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.photos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(255, 204, 102, 0.6);
+}
+
+/* Contact Section */
+.contact p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Buttons or Links (if added later) */
+a {
+    color: #ffcc66;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
